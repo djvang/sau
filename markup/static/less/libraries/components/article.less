@@ -1,0 +1,110 @@
+// Name:            Article
+// Description:     Component to create articles
+//
+// Component:       `uk-article`
+//
+// Sub-objects:     `uk-article-title`
+//                  `uk-article-meta`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@article-margin-top: @global-large-margin;
+
+@article-title-font-size-m: @global-xxlarge-font-size;
+@article-title-font-size: @article-title-font-size-m * 0.85;
+@article-title-line-height: 1.2;
+
+@article-meta-font-size: @global-small-font-size;
+@article-meta-line-height: 1.4;
+@article-meta-color: @global-muted-color;
+
+
+// Hooks
+// ========================================================================
+
+.hook-article-misc;
+
+.hook-article() {}
+
+.hook-article-adjacent() {}
+
+.hook-article-title() {}
+
+.hook-article-meta() {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -16px;
+    line-height: 1;
+
+    >* {
+        padding: 0 16px;
+
+        &:not(:first-child) {
+            border-left: 1px solid rgba(51, 49, 59, 0.15);
+        }
+    }
+}
+
+.hook-article-misc() {
+
+    *+h1,
+    *+h2,
+    *+h3,
+    *+h4 {
+        margin-top: 50px;
+    }
+
+    *+.uk-article-body {
+        margin-top: 25px;
+    }
+
+    .uk-article-body {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .uk-article-actions {
+        border: @global-border-width solid @global-border;
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    *+.uk-article-action {
+        margin-top: 20px;
+    }
+
+    .uk-article-action-label {
+        color: #7D7A81;
+    }
+
+    .uk-article-tag {
+        color: inherit;
+    }
+
+    .uk-article-tag:first-child::after {
+        content: ',';
+    }
+
+    .uk-article-tag:last-child::after {
+        content: '';
+    }
+
+}
+
+
+// Inverse
+// ========================================================================
+
+@inverse-article-meta-color: @inverse-global-muted-color;
+
+.hook-inverse() {}
+
+.hook-inverse-article-title() {}
+
+.hook-inverse-article-meta() {}

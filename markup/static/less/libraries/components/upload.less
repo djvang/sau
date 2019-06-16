@@ -1,0 +1,46 @@
+.uk-upload {
+  line-height: 1.4;
+
+  + .uk-upload {
+    margin-top: 46px;
+  }
+}
+
+.uk-upload-link {
+  font-size: 18px;
+  font-weight: 500;
+  color: @global-link-color;
+}
+
+.uk-upload-text {
+  color: #A5A8AD;
+  font-size: 14px;
+}
+
+.uk-upload-file {
+  font-size: 14px;
+  font-weight: 500;
+  color: #71D96F;
+
+  &::after {
+    content: '';
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    background-image: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.73638 1.40871L3.98851 5.75836C3.63692 6.08054 3.06659 6.08054 2.71467 5.75836L0.263789 3.51272C-0.0879297 3.19054 -0.0879297 2.66795 0.263789 2.34571C0.615575 2.02341 1.18586 2.02341 1.53749 2.34559L3.35178 4.00784L7.46248 0.241636C7.81426 -0.0806673 8.38459 -0.0804231 8.73624 0.241636C9.0879 0.563877 9.0879 1.08628 8.73638 1.40871Z' fill='%2371D96F'/%3E%3C/svg%3E%0A");
+  }
+}
+
+.uk-form-custom {
+  display: block;
+  input:hover,
+  input:focus {
+    & + .uk-upload-link {
+      color: @global-link-hover-color;
+      text-decoration: underline;
+    }
+  }
+}

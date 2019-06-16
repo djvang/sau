@@ -1,0 +1,238 @@
+.uk-hero {
+  position: relative;
+}
+
+.uk-hero-background,
+.uk-hero-overlay,
+.uk-hero-decore {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.uk-hero-object {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-grow: 1;
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+  }
+
+  video.uk-play {
+    opacity: 1;
+  }
+}
+
+.uk-hero-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.uk-hero-background {
+  .uk-hero-object {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.uk-hero-overlay {
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.uk-hero-foreground {
+  position: relative;
+  box-sizing: border-box;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.uk-hero-foreground-row {
+  position: relative;
+  box-sizing: border-box;
+  min-height: inherit;
+  display: flex;
+
+  @media (max-width: @breakpoint-xsmall-max) {
+    flex-direction: column;
+  }
+}
+
+.uk-hero-height-full {
+  min-height: 100vh;
+}
+
+.uk-hero-background-switcher > :not(.uk-active) {
+  display: none;
+}
+
+.uk-hero-background-switcher {
+  padding: 0;
+  position: relative;
+}
+
+.uk-hero-background-switcher > * {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.uk-hero-header {
+  flex-shrink: 0;
+  // padding-top: 40px;
+  // padding-bottom: 40px;
+}
+
+.uk-hero-body {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  flex-grow: 1;
+
+  .uk-container {
+    flex-grow: 1;
+  }
+}
+
+.uk-hero-heading {
+  font-size: 100px;
+  font-weight: bold;
+  line-height: normal;
+  margin-bottom: 10px;
+
+  @media (max-width: @breakpoint-small-max) {
+    font-size: 80px;
+  }
+
+  @media (max-width: @breakpoint-xsmall-max) {
+    font-size: 50px;
+  }
+}
+
+.uk-hero-description {
+  font-size: 24px;
+  line-height: 1.58;
+  font-weight: 100;
+  margin-bottom: 24px;
+
+  @media (max-width: @breakpoint-xsmall-max) {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+}
+
+.uk-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: -10px -20px;
+  padding-bottom: 40px;
+  > * {
+    margin: 10px 20px;
+  }
+
+  .uk-back {
+    margin-right: auto;
+  }
+
+  .uk-labels {
+    margin-left: 10px;
+    margin-right: 10px;
+
+    @media (max-width: @breakpoint-xsmall-max) {
+      .uk-label-for {
+        display: none;
+      }
+    }
+  }
+}
+
+.uk-hero-sidebar {
+  position: relative;
+  width: 300px;
+  min-height: inherit;
+  background-color: @global-muted-background;
+  overflow-y: auto;
+  max-height: 100vh;
+  z-index: 1;
+  flex-shrink: 0;
+
+  @media (max-width: @breakpoint-xsmall-max) {
+    width: 100%;
+    max-height: 40vh;
+  }
+}
+
+
+.uk-hero-main {
+  min-height: 660px;
+
+  // @media (max-width: @breakpoint-small-max) {
+  //   min-height: 100vh;
+  // }
+
+  .uk-hero-background,
+  .uk-hero-overlay {
+    bottom: 20px;
+  }
+  .uk-hero-body {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.uk-hero-company-history {
+  .uk-hero-background {
+    top: 100px;
+    z-index: 1;
+    pointer-events: none;
+    img {
+      object-fit: contain;
+      object-position: center right;
+    }
+  }
+  .uk-hero-body {
+    text-align: center;
+  }
+  .uk-hero-title {
+    font-size: 100px;
+    line-height: normal;
+    font-weight: bold;
+
+    @media (max-width: @breakpoint-small-max) {
+      font-size: 50px;
+    }
+  }
+  .uk-hero-description {
+    font-size: 24px;
+  }
+  .uk-hero-image {
+    position: relative;
+    display: inline-block;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 14.19%), linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 10.81%), linear-gradient(180deg, rgba(255, 255, 255, 0) 52.98%, #FFFFFF 100%);
+    }
+  }
+}

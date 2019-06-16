@@ -1,0 +1,47 @@
+.hook-card-misc() {
+  .uk-card-brand {
+    // padding: 15px;
+    display: block;
+    text-align: center;
+
+    &:hover {
+      text-decoration: none;
+
+      .uk-card-title {
+        color: @global-link-color;
+      }
+    }
+
+    .uk-card-img {
+      height: 60px;
+
+      img {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+      }
+    }
+    
+    .uk-card-title {
+      font-size: 16px;
+      margin: 20px 0 0;
+
+      @media (min-width: 960px) {
+        font-size: @base-h5-font-size;
+        margin: 30px 0 0;
+      }
+    }
+  }
+}
+
+
+.hook-grid-misc() {
+  .uk-brands-highlight {
+    overflow: visible;
+
+    .swiper-slide {
+      width: 15%;
+      min-width: 120px;
+    }
+  }
+}

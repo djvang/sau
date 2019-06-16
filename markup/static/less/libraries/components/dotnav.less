@@ -1,0 +1,59 @@
+@dotnav-margin-horizontal: 12px;
+@dotnav-margin-vertical: @dotnav-margin-horizontal;
+
+@dotnav-item-width: 16px;
+@dotnav-item-height: @dotnav-item-width;
+@dotnav-item-border-radius: 50%;
+
+@dotnav-item-background: transparent;
+@dotnav-item-hover-background: #E1E2E2;
+@dotnav-item-onclick-background: @global-primary-background;
+@dotnav-item-active-background: @global-primary-background;
+
+
+// Hooks
+// ========================================================================
+
+.hook-dotnav() {}
+
+.hook-dotnav-item() {
+    border: 3px solid @dotnav-item-hover-background;
+}
+
+.hook-dotnav-item-hover() {
+    border-color: @dotnav-item-hover-background;
+}
+
+.hook-dotnav-item-onclick() {
+    border-color: @global-primary-background;
+}
+
+.hook-dotnav-item-active() {
+    border-color: @global-primary-background;
+}
+
+.hook-dotnav-misc() {
+    .uk-slider-nav {
+        margin-top: 28px;
+        margin-bottom: 16px;
+    }
+}
+
+
+// Inverse
+// ========================================================================
+
+@inverse-dotnav-item-background: fade(@inverse-global-color, 50%);
+@inverse-dotnav-item-hover-background: fade(@inverse-global-color, 90%);
+@inverse-dotnav-item-onclick-background: fade(@inverse-global-color, 50%);
+@inverse-dotnav-item-active-background: fade(@inverse-global-color, 90%);
+
+.hook-inverse() {}
+
+.hook-inverse-dotnav-item() {}
+
+.hook-inverse-dotnav-item-hover() {}
+
+.hook-inverse-dotnav-item-onclick() {}
+
+.hook-inverse-dotnav-item-active() {}

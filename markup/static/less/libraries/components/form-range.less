@@ -1,0 +1,99 @@
+// Name:            Form Range
+// Description:     Styles for the range input type
+//
+// Component:       `uk-range`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@form-range-thumb-height: 26px;
+@form-range-thumb-border-radius: 500px;
+@form-range-thumb-background: @global-primary-background;
+
+@form-range-track-height: 4px;
+@form-range-track-background: #E7E8EB;
+@form-range-track-focus-background: #E7E8EB;
+
+// Hooks
+// ========================================================================
+
+.hook-form-range() {}
+
+.hook-form-range-thumb() {
+    margin-top: -((@form-range-thumb-height - 4) / 2);
+    position: relative;
+    background-image: url(@internal-form-radio-image);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hook-form-range-track() {}
+
+.hook-form-range-track-focus() {}
+
+.hook-form-range-misc() {
+    .noUi-target {
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+        height: 4px;
+        background: #E7E8EB;
+        margin: ((@form-range-thumb-height - 2) / 2);
+    }
+
+    .noUi-connect {
+        background-color: @global-primary-background;
+    }
+
+    .noUi-handle {
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -((@form-range-thumb-height - 4) / 2);
+        height: @form-range-thumb-height;
+        width: @form-range-thumb-height;
+        border-radius: @form-range-thumb-border-radius;
+        background: @form-range-thumb-background;
+        box-shadow: none;
+
+        background-image: url(@internal-form-radio-image);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+
+        &::before,
+        &::after {
+            display: none;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 5px 10px fade(@form-range-thumb-background, 30%);
+        }
+    }
+
+    // .noUi-handle-lower {
+    //   right: -26px !important;
+    // }
+
+    // .noUi-handle-upper {
+    //   right: 0 !important;
+    // }
+
+    html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
+        right: -13px;
+    }
+
+    .noUi-horizontal .noUi-handle {
+        height: @form-range-thumb-height;
+        width: @form-range-thumb-height;
+        top: 0;
+    }
+
+    .noUi-vertical .noUi-handle {
+        height: @form-range-thumb-height;
+        width: @form-range-thumb-height;
+    }
+}

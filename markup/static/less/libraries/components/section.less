@@ -1,0 +1,113 @@
+// Name:            Section
+// Description:     Component to create horizontal layout section
+//
+// Component:       `uk-section`
+//
+// Modifiers:       `uk-section-xsmall`
+//                  `uk-section-small`
+//                  `uk-section-large`
+//                  `uk-section-xlarge`
+//                  `uk-section-default`
+//                  `uk-section-muted`
+//                  `uk-section-primary`
+//                  `uk-section-secondary`
+//                  `uk-section-overlap`
+//
+// States:          `uk-preserve-color`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@section-padding-vertical: 15px;
+@section-padding-vertical-m: 30px;
+
+@section-xsmall-padding-vertical: @global-margin;
+
+@section-small-padding-vertical: @global-medium-margin;
+
+@section-large-padding-vertical: @global-large-margin;
+@section-large-padding-vertical-m: 80px;
+
+@section-xlarge-padding-vertical: @global-xlarge-margin;
+@section-xlarge-padding-vertical-m: 120px;
+
+@section-default-background: @global-background;
+
+@section-muted-background: @global-muted-background;
+
+@section-primary-background: @global-primary-background;
+@section-primary-color-mode: light;
+
+@section-secondary-background: @global-secondary-background;
+@section-secondary-color-mode: light;
+
+
+// Hooks
+// ========================================================================
+
+.hook-section() {
+    position: relative;
+
+    &-background,
+    &-overlay,
+    &-decor {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    &-decor-bottom-right {
+        top: auto;
+        left: auto;
+    }
+
+    &-decor-bottom-outer {
+        top: auto;
+        bottom: -100px;
+    }
+
+    &-decor {
+        svg {
+            width: auto;
+            height: auto;
+        }
+    }
+
+    &-overlay {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &-foreground {
+        position: relative;
+        min-height: inherit;
+
+        .uk-container {
+            flex-grow: 1;
+        }
+    }
+}
+
+.hook-section-default() {}
+
+.hook-section-muted() {}
+
+.hook-section-secondary() {}
+
+.hook-section-primary() {}
+
+.hook-section-overlap() {}
+
+.hook-section-misc() {
+    @media (max-width: @breakpoint-xsmall-max) {
+        .uk-section-xlarge {
+            padding-top: 90px;
+            padding-bottom: 90px;
+        }
+    }
+}

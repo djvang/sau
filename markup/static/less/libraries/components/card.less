@@ -1,0 +1,185 @@
+// Name:            Card
+// Description:     Component to create boxed content containers
+//
+// Component:       `uk-card`
+//
+// Sub-objects:     `uk-card-body`
+//                  `uk-card-header`
+//                  `uk-card-footer`
+//                  `uk-card-media-*`
+//                  `uk-card-title`
+//                  `uk-card-badge`
+//
+// Modifiers:       `uk-card-hover`
+//                  `uk-card-default`
+//                  `uk-card-primary`
+//                  `uk-card-secondary`
+//                  `uk-card-small`
+//                  `uk-card-large`
+//
+// Uses:            `uk-grid-stack`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@card-body-padding-horizontal: @global-small-gutter;
+@card-body-padding-vertical: @global-small-gutter;
+
+@card-body-padding-horizontal-l: 20px;
+@card-body-padding-vertical-l: 20px;
+
+@card-header-padding-horizontal: @global-gutter;
+@card-header-padding-vertical: round(@global-gutter / 2);
+
+@card-header-padding-horizontal-l: @global-medium-gutter;
+@card-header-padding-vertical-l: round(@global-medium-gutter / 2);
+
+@card-footer-padding-horizontal: @global-gutter;
+@card-footer-padding-vertical: (@global-gutter / 2);
+
+@card-footer-padding-horizontal-l: @global-medium-gutter;
+@card-footer-padding-vertical-l: round(@global-medium-gutter / 2);
+
+@card-title-font-size: @global-large-font-size;
+@card-title-line-height: 1.4;
+
+@card-badge-top: @global-gutter;
+@card-badge-right: @card-badge-top;
+
+@card-hover-background: @global-muted-background;
+
+@card-default-background: @global-muted-background;
+@card-default-color: @global-color;
+@card-default-title-color: @global-emphasis-color;
+@card-default-hover-background: darken(@card-default-background, 5%);
+
+@card-primary-background: @global-primary-background;
+@card-primary-color: @global-inverse-color;
+@card-primary-title-color: @card-primary-color;
+@card-primary-hover-background: darken(@card-primary-background, 5%);
+@card-primary-color-mode: light;
+
+@card-secondary-background: @global-secondary-background;
+@card-secondary-color: @global-inverse-color;
+@card-secondary-title-color: @card-secondary-color;
+@card-secondary-hover-background: darken(@card-secondary-background, 5%);
+@card-secondary-color-mode: light;
+
+@card-small-body-padding-horizontal: @global-margin;
+@card-small-body-padding-vertical: @global-margin;
+@card-small-header-padding-horizontal: @global-margin;
+@card-small-header-padding-vertical: round(@global-margin / 1.5);
+@card-small-footer-padding-horizontal: @global-margin;
+@card-small-footer-padding-vertical: round(@global-margin / 1.5);
+
+@card-large-body-padding-horizontal-l: @global-large-gutter;
+@card-large-body-padding-vertical-l: @global-large-gutter;
+@card-large-header-padding-horizontal-l: @global-large-gutter;
+@card-large-header-padding-vertical-l: round(@global-large-gutter / 2);
+@card-large-footer-padding-horizontal-l: @global-large-gutter;
+@card-large-footer-padding-vertical-l: round(@global-large-gutter / 2);
+
+
+// Hooks
+// ========================================================================
+
+.hook-card() {
+
+    &-background,
+    &-overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    &-background {
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+
+    &-overlay {
+        opacity: 0.85;
+    }
+
+    &-foreground {
+        position: relative;
+        box-sizing: border-box;
+        min-height: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    &-top {
+        margin-bottom: auto;
+    }
+
+    &-bottom {
+        margin-top: auto;
+    }
+
+    &-title {
+        margin-top: 0;
+        margin-bottom: 10px;
+        line-height: 1.5;
+        font-weight: bold;
+        font-family: @global-font-family-secondary;
+    }
+
+}
+
+.hook-card-body() {}
+
+.hook-card-header() {}
+
+.hook-card-footer() {}
+
+.hook-card-media() {}
+
+.hook-card-media-top() {}
+
+.hook-card-media-bottom() {}
+
+.hook-card-media-left() {}
+
+.hook-card-media-right() {}
+
+.hook-card-title() {}
+
+.hook-card-badge() {}
+
+.hook-card-hover() {}
+
+.hook-card-default() {}
+
+.hook-card-default-title() {}
+
+.hook-card-default-hover() {}
+
+.hook-card-default-header() {}
+
+.hook-card-default-footer() {}
+
+.hook-card-primary() {}
+
+.hook-card-primary-title() {}
+
+.hook-card-primary-hover() {}
+
+.hook-card-secondary() {}
+
+.hook-card-secondary-title() {}
+
+.hook-card-secondary-hover() {}
+
+.hook-card-misc() {}

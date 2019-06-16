@@ -1,0 +1,84 @@
+// Name:            Tab
+// Description:     Component to create a tabbed navigation
+//
+// Component:       `uk-tab`
+//
+// Modifiers:       `uk-tab-bottom`
+//                  `uk-tab-left`
+//                  `uk-tab-right`
+//
+// States:          `uk-active`
+//                  `uk-disabled`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@tab-margin-horizontal:                  30px;
+
+@tab-item-padding-horizontal:            15px;
+@tab-item-padding-vertical:              0;
+@tab-item-color:                         @global-color;
+@tab-item-hover-color:                   @global-color;
+@tab-item-hover-text-decoration:         none;
+@tab-item-active-color:                  @global-emphasis-color;
+@tab-item-disabled-color:                @global-muted-color;
+
+// Hooks
+// ========================================================================
+
+.hook-tab() {}
+.hook-tab-item() {
+  font-size: 16px;
+  min-height: 40px;
+  position: relative;
+  left: -10px;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 14px;
+    margin: auto;
+    margin-top: 10px;
+    height: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 0L0 8H14L7 0Z' fill='white'/%3E%3C/svg%3E%0A");
+    opacity: 0;
+  }
+}
+.hook-tab-item-hover() {
+  text-decoration: underline;
+}
+.hook-tab-item-active() {
+  font-weight: bold;
+  text-decoration: none;
+  &::after {
+    opacity: 1;
+  }
+}
+.hook-tab-item-disabled() {}
+.hook-tab-bottom() {}
+.hook-tab-bottom-item() {}
+.hook-tab-left() {}
+.hook-tab-left-item() {}
+.hook-tab-right() {}
+.hook-tab-right-item() {}
+.hook-tab-misc() {}
+
+
+// Inverse
+// ========================================================================
+
+@inverse-tab-item-color:                       @inverse-global-muted-color;
+@inverse-tab-item-hover-color:                 @inverse-global-color;
+@inverse-tab-item-active-color:                @inverse-global-emphasis-color;
+@inverse-tab-item-disabled-color:              @inverse-global-muted-color;
+
+.hook-inverse() {}
+
+.hook-inverse-tab() {}
+.hook-inverse-tab-item() {}
+.hook-inverse-tab-item-hover() {}
+.hook-inverse-tab-item-active() {}
+.hook-inverse-tab-item-disabled() {}

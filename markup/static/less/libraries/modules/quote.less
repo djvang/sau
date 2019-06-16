@@ -1,0 +1,64 @@
+.quote {}
+
+*+.quote {
+    margin-top: 30px;
+}
+
+.quote-body {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.71;
+    color: #33313B;
+    border: @global-border-width solid @global-border;
+    padding: 20px;
+    position: relative;
+
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 29px;
+        height: 22px;
+        background-size: contain;
+        margin-right: 8px;
+        .svg-fill(@internal-quote-image, "#000", @global-primary-background);
+    }
+}
+
+.quote-footer {
+    margin-top: 16px;
+}
+
+.quote-author {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: -8px;
+
+    >* {
+        margin: 8px;
+    }
+}
+
+.quote-author-name {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.quote-author-avatar {
+    .svg-fill(@internal-avatar-image, "#000", @global-primary-background);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: @global-primary-background;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover
+    }
+}

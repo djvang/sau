@@ -1,0 +1,118 @@
+// Name:            Modal
+// Description:     Component to create modal dialogs
+//
+// Component:       `uk-modal`
+//
+// Sub-objects:     `uk-modal-page`
+//                  `uk-modal-dialog`
+//                  `uk-modal-header`
+//                  `uk-modal-body`
+//                  `uk-modal-footer`
+//                  `uk-modal-title`
+//                  `uk-modal-close`
+//
+// Adopted:         `uk-modal-close-default`
+//                  `uk-modal-close-outside`
+//                  `uk-modal-close-full`
+//
+// Modifiers:       `uk-modal-container`
+//                  `uk-modal-full`
+//
+// States:          `uk-open`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@modal-z-index:                                 @global-z-index + 10;
+@modal-background:                              fade(@global-primary-background, 90%);
+
+@modal-padding-horizontal:                      15px;
+@modal-padding-horizontal-s:                    @global-gutter;
+@modal-padding-horizontal-m:                    @global-medium-gutter;
+@modal-padding-vertical:                        80px;
+@modal-padding-vertical-s:                      50px;
+
+@modal-dialog-width:                            680px;
+@modal-dialog-background:                       @global-background;
+
+@modal-container-width:                         960px;
+
+@modal-body-padding-horizontal:                 30px;
+@modal-body-padding-vertical:                   80px;
+
+@modal-header-padding-horizontal:               @global-gutter;
+@modal-header-padding-vertical:                 (@modal-header-padding-horizontal / 2);
+@modal-header-background:                       @global-muted-background;
+
+@modal-footer-padding-horizontal:               @global-gutter;
+@modal-footer-padding-vertical:                 (@modal-footer-padding-horizontal / 2);
+@modal-footer-background:                       @global-muted-background;
+
+@modal-title-font-size:                         28px;
+@modal-title-line-height:                       normal;
+
+@modal-close-position:                          @global-small-margin;
+@modal-close-padding:                           5px;
+
+@modal-close-outside-position:                  0;
+@modal-close-outside-translate:                 100%;
+@modal-close-outside-color:                     lighten(@global-inverse-color, 20%);
+@modal-close-outside-hover-color:               @global-inverse-color;
+
+
+// Hooks
+// ========================================================================
+
+.hook-modal() {}
+.hook-modal-dialog() {
+  border-radius: 10px;
+}
+.hook-modal-full() {}
+.hook-modal-header() {}
+.hook-modal-body() {
+  overflow: hidden;
+}
+.hook-modal-footer() {}
+.hook-modal-title() {
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.hook-modal-close() {}
+.hook-modal-close-hover() {}
+.hook-modal-close-default() {}
+.hook-modal-close-default-hover() {}
+.hook-modal-close-outside() {
+  svg {
+    width: 1em;
+    height: 1em;
+    font-size: 24px;
+    opacity: 0.5;
+  }
+}
+.hook-modal-close-outside-hover() {
+  svg {
+    opacity: 1;
+  }
+}
+.hook-modal-close-full() {}
+.hook-modal-close-full-hover() {}
+.hook-modal-misc() {
+  .uk-modal-close-outside {
+    @media (min-width: @breakpoint-medium) {
+      top: 35px;
+      right: -15px;
+    }
+  }
+
+  .uk-modal-container-small .uk-modal-dialog {
+    width: 500px;
+  }
+  .uk-modal-container-small .uk-modal-body {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}

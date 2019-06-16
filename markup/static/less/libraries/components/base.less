@@ -1,0 +1,205 @@
+// Name:            Base
+// Description:     Default values for HTML elements
+//
+// Component:       `uk-link`
+//                  `uk-h1`, `uk-h2`, `uk-h3`, `uk-h4`, `uk-h5`, `uk-h6`
+//                  `uk-hr`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@base-body-background: @global-background;
+@base-body-font-family: @global-font-family;
+@base-body-font-weight: normal;
+@base-body-font-size: @global-font-size;
+@base-body-line-height: @global-line-height;
+@base-body-color: @global-color;
+
+@base-link-color: @global-link-color;
+@base-link-text-decoration: none;
+@base-link-hover-color: @global-link-hover-color;
+@base-link-hover-text-decoration: underline;
+
+@base-strong-font-weight: bolder;
+@base-code-font-size: @global-small-font-size;
+@base-code-font-family: Consolas, monaco, monospace;
+@base-code-color: @global-danger-background;
+@base-em-color: @global-danger-background;
+@base-ins-background: #ffd;
+@base-ins-color: @global-color;
+@base-mark-background: #ffd;
+@base-mark-color: @global-color;
+@base-quote-font-style: italic;
+@base-small-font-size: 80%;
+
+@base-margin-vertical: @global-margin;
+
+@base-heading-font-family: @global-font-family;
+@base-heading-font-weight: 500;
+@base-heading-color: @global-emphasis-color;
+@base-heading-text-transform: none;
+@base-heading-margin-top: @global-medium-margin;
+@base-h1-font-size-m: @global-xxlarge-font-size;
+@base-h1-font-size: @base-h1-font-size-m * 0.85;
+@base-h1-line-height: 1.22;
+@base-h2-font-size-m: @global-xlarge-font-size;
+@base-h2-font-size: @base-h2-font-size-m * 0.85;
+@base-h2-line-height: 1.35;
+@base-h3-font-size: @global-large-font-size;
+@base-h3-line-height: 1.45;
+@base-h4-font-size: @global-medium-font-size;
+@base-h4-line-height: 1.77;
+@base-h5-font-size: @global-font-size;
+@base-h5-line-height: 1.77;
+@base-h6-font-size: @global-font-size;
+@base-h6-line-height: 1.77;
+
+@base-list-padding-left: 15px;
+
+@base-hr-margin-vertical: @global-margin;
+@base-hr-border-width: @global-border-width;
+@base-hr-border: @global-border;
+
+@base-blockquote-font-size: @global-medium-font-size;
+@base-blockquote-line-height: 1.5;
+@base-blockquote-font-style: italic;
+@base-blockquote-margin-vertical: @global-margin;
+@base-blockquote-footer-margin-top: @global-small-margin;
+@base-blockquote-footer-font-size: @global-small-font-size;
+@base-blockquote-footer-line-height: 1.5;
+
+@base-pre-font-size: @global-small-font-size;
+@base-pre-line-height: 1.5;
+@base-pre-font-family: @base-code-font-family;
+@base-pre-color: @global-color;
+
+@base-selection-background: #39f;
+@base-selection-color: @global-inverse-color;
+
+
+// Hooks
+// ========================================================================
+
+.hook-base-body() {
+    min-width: 1300px;
+}
+
+.hook-base-link() {
+    text-decoration: underline;
+}
+
+.hook-base-link-hover() {}
+
+.hook-base-code() {}
+
+.hook-base-heading() {}
+
+.hook-base-h1() {
+    font-family: @global-font-family-secondary;
+    font-weight: bold;
+}
+
+.hook-base-h2() {}
+
+.hook-base-h3() {}
+
+.hook-base-h4() {}
+
+.hook-base-h5() {}
+
+.hook-base-h6() {}
+
+.hook-base-hr() {}
+
+.hook-base-blockquote() {
+    position: relative;
+    font-size: 1.11em;
+    font-family: @global-font-family-secondary;
+    font-weight: bold;
+    font-style: normal;
+    padding: 38px;
+
+    &::before {
+        content: '”';
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        font-size: 70px;
+        line-height: 0.5;
+        color: @global-primary-background;
+        background-image: linear-gradient(to right, @global-muted-background ~'calc(50% - 40px)', transparent ~'calc(50% - 40px)', transparent ~'calc(50% + 40px)', @global-muted-background ~'calc(50% + 40px)');
+    }
+
+    border-bottom: @global-border-width solid @global-muted-background;
+}
+
+.hook-base-blockquote-footer() {
+    font-weight: normal;
+}
+
+.hook-base-pre() {}
+
+.hook-base-misc() {
+
+    b,
+    strong {
+        font-weight: 500;
+    }
+
+    .uk-date {
+        font-size: 14px;
+        line-height: 100%;
+
+        color: rgba(0, 0, 0, 0.45);
+    }
+}
+
+
+// Inverse
+// ========================================================================
+
+@inverse-base-color: @inverse-global-color;
+@inverse-base-link-color: @inverse-global-emphasis-color;
+@inverse-base-link-hover-color: @inverse-global-emphasis-color;
+@inverse-base-code-color: @inverse-global-color;
+@inverse-base-em-color: @inverse-global-emphasis-color;
+@inverse-base-heading-color: @inverse-global-emphasis-color;
+@inverse-base-hr-border: @inverse-global-border;
+
+.hook-inverse() {
+    .uk-date {
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+.hook-inverse-base-link() {}
+
+.hook-inverse-base-link-hover() {}
+
+.hook-inverse-base-code() {}
+
+.hook-inverse-base-heading() {}
+
+.hook-inverse-base-h1() {}
+
+.hook-inverse-base-h2() {}
+
+.hook-inverse-base-h3() {}
+
+.hook-inverse-base-h4() {}
+
+.hook-inverse-base-h5() {}
+
+.hook-inverse-base-h6() {}
+
+.hook-inverse-base-blockquote() {}
+
+.hook-inverse-base-blockquote-footer() {}
+
+.hook-inverse-base-hr() {}

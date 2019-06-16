@@ -1,0 +1,97 @@
+// Name:            Background
+// Description:     Utilities for backgrounds
+//
+// Component:       `uk-background-*`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@background-default-background:                 @global-background;
+@background-muted-background:                   #F1F2F4;
+@background-primary-background:                 #376BC7;
+@background-secondary-background:               @global-color;
+
+// Hooks
+// ========================================================================
+
+.hook-background-misc;
+
+.hook-background-misc() {
+  .uk-background-primary {
+    &.is-shadow {
+      box-shadow: 0px 0px 50px rgba(55, 107, 199, 0.4);
+    }
+  }
+  .uk-background-muted {
+    background-color: @background-muted-background;
+  }
+  .uk-background-warning {
+    background-color: #FFDA0D;
+  }
+  .uk-background-danger {
+    background-color: @global-danger-background;
+  }
+  .uk-background-1 {
+    background-color: #2E3191;
+  }
+  .uk-background-2 {
+    background: linear-gradient(121.62deg, #F2994A 0%, #F2C94C 100%);
+  }
+  .uk-background-3 {
+    background: linear-gradient(121.62deg, #C2E59C 0%, #64B3F4 100%);
+  }
+  .uk-background-4 {
+    background: linear-gradient(121.62deg, #4B134F 0%, #C94B4B 100%);
+  }
+  .uk-background-5 {
+    background: linear-gradient(121.62deg, #FF416C 0%, #FF4B2B 100%);
+  }
+  .uk-background-6 {
+    background: linear-gradient(121.62deg, #76B852 0%, #BCE9A2 100%);
+  }
+  .uk-background-7 {
+    background: linear-gradient(121.62deg, #9796F0 0%, #FBC7D4 100%);
+  }
+  .uk-background-8 {
+    background: linear-gradient(121.62deg, #F2709C 0%, #FF9472 100%);
+  }
+  .uk-background-9 {
+    background: linear-gradient(121.62deg, #536976 0%, #292E49 100%);
+  }
+  .uk-background-10 {
+    background: linear-gradient(121.62deg, #0052D4 0%, #6FB1FC 100%);
+  }
+  .uk-background-11 {
+    background: linear-gradient(121.62deg, #FFD194 0%, #D1913C 100%);
+  }
+  .uk-background-12 {
+    background: linear-gradient(121.62deg, #F2994A 0%, #F2C94C 100%);
+  }
+  .uk-background-13 {
+    background: #376BC7;
+  }
+  .uk-background-14 {
+    background: #FBF659;
+    &.is-shadow {
+      box-shadow: 0px 0px 50px rgba(251, 246, 89, 0.6);
+    }
+  }
+  .uk-background-15 {
+    background: @background-secondary-background;
+  }
+  .uk-background-16 {
+    background: #ffffff;
+  }
+  .uk-background-17 {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), linear-gradient(180deg, rgba(255, 255, 255, 0) 60.7%, #FFFFFF 100%);
+  }
+  .uk-background-18 {
+    background: linear-gradient(163.62deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%), #376BC7;
+    &.is-shadow {
+      box-shadow: 0px 5px 40px rgba(55, 107, 199, 0.4);
+    }
+  }
+}

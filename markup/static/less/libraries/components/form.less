@@ -1,0 +1,188 @@
+// Name:            Form
+// Description:     Styles for forms
+//
+// Component:       `uk-form-*`
+//                  `uk-input`
+//                  `uk-select`
+//                  `uk-textarea`
+//                  `uk-radio`
+//                  `uk-checkbox`
+//                  `uk-legend`
+//                  `uk-fieldset`
+//
+// Sub-objects:     `uk-form-custom`
+//                  `uk-form-stacked`
+//                  `uk-form-horizontal`
+//                  `uk-form-label`
+//                  `uk-form-controls`
+//                  `uk-form-icon`
+//                  `uk-form-icon-flip`
+//
+// Modifiers:       `uk-form-small`
+//                  `uk-form-large`
+//                  `uk-form-danger`
+//                  `uk-form-success`
+//                  `uk-form-blank`
+//                  `uk-form-width-xsmall`
+//                  `uk-form-width-small`
+//                  `uk-form-width-medium`
+//                  `uk-form-width-large`
+//                  `uk-form-controls-text`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@form-height: @global-control-height;
+@form-line-height: @form-height;
+@form-padding-horizontal: 20px;
+@form-padding-vertical: 14px;
+
+@form-background: @global-background;
+@form-color: @global-color;
+
+@form-focus-background: @global-background;
+@form-focus-color: @global-color;
+
+@form-disabled-background: #F1F2F4;
+@form-disabled-color: @global-muted-color;
+
+@form-placeholder-color: @global-muted-color;
+
+@form-small-height: @global-control-small-height;
+@form-small-padding-horizontal: 8px;
+@form-small-line-height: @form-small-height;
+@form-small-font-size: @global-small-font-size;
+
+@form-large-height: @global-control-large-height;
+@form-large-padding-horizontal: 12px;
+@form-large-line-height: @form-large-height;
+@form-large-font-size: @global-medium-font-size;
+
+@form-danger-color: @global-danger-background;
+@form-success-color: @global-success-background;
+
+@form-width-xsmall: 50px;
+@form-width-small: 130px;
+@form-width-medium: 240px;
+@form-width-large: 320px;
+
+@form-select-padding-right: 40px;
+@form-select-icon-color: @global-color;
+@form-select-option-color: #444;
+@form-select-disabled-icon-color: @global-muted-color;
+
+@form-radio-size: 26px;
+@form-radio-margin-top: -4px;
+@form-radio-background: #F1F2F4;
+
+@form-radio-checked-background: @global-primary-background;
+@form-radio-checked-icon-color: @global-inverse-color;
+
+@form-radio-checked-focus-background: darken(@global-primary-background, 10%);
+
+@form-radio-disabled-background: @global-muted-background;
+@form-radio-disabled-icon-color: @global-muted-color;
+
+@form-legend-font-size: @global-large-font-size;
+@form-legend-line-height: 1.4;
+
+@form-stacked-margin-bottom: @global-small-margin;
+
+@form-horizontal-label-width: 200px;
+@form-horizontal-label-margin-top: 7px;
+@form-horizontal-controls-margin-left: 215px;
+@form-horizontal-controls-text-padding-top: 7px;
+
+@form-icon-width: @form-height;
+@form-icon-color: @global-muted-color;
+@form-icon-hover-color: @global-color;
+
+@internal-form-select-image: "data:image/svg+xml,%3Csvg width='14' height='7' viewBox='0 0 14 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.8568 0.135266C13.6638 -0.0450886 13.3502 -0.0450886 13.1573 0.135266L7.00677 5.89533L0.844189 0.135266C0.651231 -0.0450886 0.337675 -0.0450886 0.144718 0.135266C-0.0482394 0.31562 -0.0482394 0.608696 0.144718 0.78905L6.64497 6.86473C6.74145 6.95491 6.86205 7 6.99471 7C7.11531 7 7.24796 6.95491 7.34444 6.86473L13.8447 0.78905C14.0497 0.608696 14.0497 0.31562 13.8568 0.135266V0.135266Z' fill='grey'/%3E%3C/svg%3E%0A";
+@internal-form-select-image-inverse: "data:image/svg+xml,%3Csvg width='14' height='7' viewBox='0 0 14 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.8568 0.135266C13.6638 -0.0450886 13.3502 -0.0450886 13.1573 0.135266L7.00677 5.89533L0.844189 0.135266C0.651231 -0.0450886 0.337675 -0.0450886 0.144718 0.135266C-0.0482394 0.31562 -0.0482394 0.608696 0.144718 0.78905L6.64497 6.86473C6.74145 6.95491 6.86205 7 6.99471 7C7.11531 7 7.24796 6.95491 7.34444 6.86473L13.8447 0.78905C14.0497 0.608696 14.0497 0.31562 13.8568 0.135266V0.135266Z' fill='white'/%3E%3C/svg%3E%0A";
+@internal-form-radio-image: "data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='7' cy='7' r='7' fill='white'/%3E%3C/svg%3E%0A";
+@internal-form-checkbox-image: "data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.8243 0.179484C11.59 -0.0598279 11.2101 -0.0598279 10.9757 0.179484L3.78737 7.5208L1.02428 4.69895C0.789972 4.45964 0.410097 4.45966 0.175746 4.69895C-0.058582 4.93824 -0.058582 5.32619 0.175746 5.5655L3.3631 8.8206C3.59734 9.05989 3.97749 9.05972 4.21163 8.8206L11.8243 1.04606C12.0586 0.806773 12.0586 0.418795 11.8243 0.179484Z' fill='white'/%3E%3C/svg%3E%0A";
+@internal-form-checkbox-indeterminate-image: "../../images/backgrounds/form-checkbox-indeterminate.svg";
+
+
+
+// Hooks
+// ========================================================================
+
+.hook-form() {}
+
+.hook-form-single-line() {}
+
+.hook-form-multi-line() {}
+
+.hook-form-focus() {}
+
+.hook-form-disabled() {}
+
+.hook-form-danger() {}
+
+.hook-form-success() {}
+
+.hook-form-blank() {}
+
+.hook-form-blank-focus() {}
+
+.hook-form-radio() {}
+
+.hook-form-radio-focus() {}
+
+.hook-form-radio-checked() {}
+
+.hook-form-radio-checked-focus() {}
+
+.hook-form-radio-disabled() {}
+
+.hook-form-legend() {}
+
+.hook-form-label() {}
+
+.hook-form-stacked-label() {}
+
+.hook-form-horizontal-label() {}
+
+.hook-form-misc() {}
+
+
+// Inverse
+// ========================================================================
+
+@inverse-form-background: @inverse-global-muted-background;
+@inverse-form-color: @inverse-global-color;
+@inverse-form-focus-background: @inverse-global-muted-background;
+@inverse-form-focus-color: @inverse-global-color;
+@inverse-form-placeholder-color: @inverse-global-muted-color;
+
+@inverse-form-select-icon-color: @inverse-global-color;
+
+@inverse-form-radio-background: darken(@inverse-global-muted-background, 5%);
+
+@inverse-form-radio-checked-background: @inverse-global-primary-background;
+@inverse-form-radio-checked-icon-color: @inverse-global-inverse-color;
+
+@inverse-form-radio-checked-focus-background: darken(@inverse-global-primary-background, 10%);
+
+@inverse-form-icon-color: @inverse-global-muted-color;
+@inverse-form-icon-hover-color: @inverse-global-color;
+
+.hook-inverse() {}
+
+.hook-inverse-form() {}
+
+.hook-inverse-form-focus() {}
+
+.hook-inverse-form-radio() {}
+
+.hook-inverse-form-radio-focus() {}
+
+.hook-inverse-form-radio-checked() {}
+
+.hook-inverse-form-radio-checked-focus() {}
+
+.hook-inverse-form-label() {}

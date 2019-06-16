@@ -1,0 +1,116 @@
+.uk-footer {
+    background-color: #393742;
+}
+
+.uk-footer-top {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background-color: #33313B;
+}
+
+.uk-footer-bottom {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.uk-footer-navs {
+    display: flex;
+}
+
+.uk-footer-nav-secondary {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 -26px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    >li {
+        >a {
+            font-size: 16px;
+            line-height: 100%;
+            color: #A3A2A7;
+            display: flex;
+            padding: 4px 8px;
+            margin-left: 18px;
+            margin-right: 18px;
+            text-decoration: none;
+        }
+    }
+}
+
+.uk-footer-nav-primary {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 -25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    >li {
+        >a {
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 10px 25px;
+            display: flex;
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                opacity: 0.8;
+            }
+        }
+
+        &.uk-active {
+            >a {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+.uk-footer-right {
+    margin-left: auto;
+}
+
+.uk-copyrightes {
+    font-size: 14px;
+    line-height: 1.28;
+    display: flex;
+    justify-content: space-between;
+}
+
+.uk-copyright-dev {
+    width: 320px;
+
+    .uk-copyright-label {
+        margin-bottom: 8px;
+    }
+}
+
+.uk-copyright-title {
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.uk-copyright-label {
+    color: #A3A2A7;
+}
+
+
+.uk-footer-row {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    +.uk-footer-row {
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+    }
+}
+
+.uk-footer-actions {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
