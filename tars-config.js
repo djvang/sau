@@ -1,64 +1,62 @@
 module.exports = {
-    "postcss": [],
-    "svg": {
-        "active": true,
-        "workflow": "sprite",
-        "symbolsConfig": {
-            "loadingType": "inject",
-            "usePolyfillForExternalSymbols": true,
-            "pathToExternalSymbolsFile": ""
+    postcss: [],
+    svg: {
+        active: true,
+        workflow: "sprite",
+        symbolsConfig: {
+            loadingType: "inject",
+            usePolyfillForExternalSymbols: true,
+            pathToExternalSymbolsFile: ""
         }
     },
-    "css": {
-        "workflow": "concat"
+    css: {
+        workflow: "concat"
     },
-    "js": {
-        "workflow": "modular",
-        "bundler": "webpack",
-        "lint": false,
-        "useBabel": true,
-        "removeConsoleLog": true,
-        "webpack": {
-            "useHMR": false,
-            "providePlugin": {}
+    js: {
+        workflow: "modular",
+        bundler: "webpack",
+        lint: false,
+        useBabel: true,
+        removeConsoleLog: true,
+        webpack: {
+            useHMR: false,
+            providePlugin: {}
         },
-        "jsPathsToConcatBeforeModulesJs": [],
-        "lintJsCodeBeforeModules": false,
-        "jsPathsToConcatAfterModulesJs": [],
-        "lintJsCodeAfterModules": false
+        jsPathsToConcatBeforeModulesJs: [],
+        lintJsCodeBeforeModules: false,
+        jsPathsToConcatAfterModulesJs: [],
+        lintJsCodeAfterModules: false
     },
-    "sourcemaps": {
-        "js": {
-            "active": true,
-            "inline": true
+    sourcemaps: {
+        js: {
+            active: true,
+            inline: true
         },
-        "css": {
-            "active": true,
-            "inline": true
+        css: {
+            active: true,
+            inline: true
         }
     },
-    "notifyConfig": {
-        "useNotify": true,
-        "title": "TARS notification",
-        "sounds": {},
-        "taskFinishedText": "Task finished at: "
+    notifyConfig: {
+        useNotify: true,
+        title: "TARS notification",
+        sounds: {},
+        taskFinishedText: "Task finished at: "
     },
-    "minifyHtml": false,
-    "generateStaticPath": true,
-    "devPath": "./dev/",
-    "buildPath": "./builds/",
-    "useBuildVersioning": true,
-    "useArchiver": true,
-    "ulimit": 4096,
-    "templater": "handlebars",
-    "cssPreprocessor": "less",
-    "useImagesForDisplayWithDpi": [
-        96
-    ],
-    "fs": {
-        "staticFolderName": "static",
-        "imagesFolderName": "img",
-        "componentsFolderName": "components"
+    minifyHtml: false,
+    generateStaticPath: true,
+    devPath: "./dev/",
+    buildPath: "./builds/",
+    useBuildVersioning: false,
+    useArchiver: false,
+    ulimit: 4096,
+    templater: "handlebars",
+    cssPreprocessor: "less",
+    useImagesForDisplayWithDpi: [96],
+    fs: {
+        staticFolderName: "static",
+        imagesFolderName: "img",
+        componentsFolderName: "components"
     },
-    "staticPrefix": "static/"
+    staticPrefix: "static/"
 };
