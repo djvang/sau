@@ -1,0 +1,59 @@
+// Variables
+// ========================================================================
+
+@slidenav-padding-vertical: 5px;
+@slidenav-padding-horizontal: 5px;
+
+@slidenav-color: #A4A4A8;
+@slidenav-hover-color: #33313B;
+@slidenav-active-color: #33313B;
+
+@slidenav-large-padding-vertical: 10px;
+@slidenav-large-padding-horizontal: @slidenav-large-padding-vertical;
+
+
+// Hooks
+// ========================================================================
+
+.hook-slidenav() {
+    svg {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+    }
+
+    polyline {
+        stroke-width: 3px;
+        stroke-linecap: round;
+    }
+}
+
+.hook-slidenav-hover() {}
+
+.hook-slidenav-active() {}
+
+.hook-slidenav-previous() {}
+
+.hook-slidenav-next() {}
+
+.hook-slidenav-large() {}
+
+.hook-slidenav-container() {}
+
+.hook-slidenav-misc() {}
+
+
+// Inverse
+// ========================================================================
+
+@inverse-slidenav-color: fade(@inverse-global-color, 70%);
+@inverse-slidenav-hover-color: fade(@inverse-global-color, 95%);
+@inverse-slidenav-active-color: fade(@inverse-global-color, 70%);
+
+.hook-inverse() {}
+
+.hook-inverse-slidenav() {}
+
+.hook-inverse-slidenav-hover() {}
+
+.hook-inverse-slidenav-active() {}

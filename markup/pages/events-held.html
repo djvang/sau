@@ -1,0 +1,196 @@
+<!doctype html>
+<html class="no-js" lang="ua">
+
+<head>
+    {{> head/head head.defaults}}
+</head>
+
+<body>
+    %=symbols=%
+
+    <div class="uk-page" id="app">
+
+        <div class="uk-page-header">
+            {{> header/header dealers=false}}
+        </div>
+
+        <div class="uk-page-body">
+            <div class="uk-section uk-section-events">
+                <div class="uk-container">
+                    <div class="uk-grid" data-uk-grid>
+                        <div class="uk-width-3-4">
+                            <h1 class="uk-heading">Проведені заходи</h1>
+                            <div class="uk-grid uk-grid-divider uk-grid-small uk-child-width-1-1 uk-grid-research-secondary"
+                                data-uk-grid>
+                                <div>
+                                    <a href="#" class="uk-card uk-card-event-held">
+                                        <div class="uk-card-body">
+                                            <div class="uk-date">18 квітня 2019 року</div>
+                                            <h3 class="uk-card-title">Порівняння опитувань та екзит-полів з
+                                                результататми виборів президента України 2019</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="uk-card uk-card-event-held">
+                                        <div class="uk-card-body">
+                                            <div class="uk-date">18 квітня 2019 року</div>
+                                            <h3 class="uk-card-title">Порівняння опитувань та екзит-полів з
+                                                результататми виборів президента України 2019</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="uk-card uk-card-event-held">
+                                        <div class="uk-card-body">
+                                            <div class="uk-date">18 квітня 2019 року</div>
+                                            <h3 class="uk-card-title">Порівняння опитувань та екзит-полів з
+                                                результататми виборів президента України 2019</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="uk-card uk-card-event-held">
+                                        <div class="uk-card-body">
+                                            <div class="uk-date">18 квітня 2019 року</div>
+                                            <h3 class="uk-card-title">Порівняння опитувань та екзит-полів з
+                                                результататми виборів президента України 2019</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="uk-card uk-card-event-held">
+                                        <div class="uk-card-body">
+                                            <div class="uk-date">18 квітня 2019 року</div>
+                                            <h3 class="uk-card-title">Порівняння опитувань та екзит-полів з
+                                                результататми виборів президента України 2019</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="uk-card uk-card-event-held">
+                                        <div class="uk-card-body">
+                                            <div class="uk-date">18 квітня 2019 року</div>
+                                            <h3 class="uk-card-title">Порівняння опитувань та екзит-полів з
+                                                результататми виборів президента України 2019</h3>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div v-for="research in research.data">
+                                    <a v-bind:href="research.link" class="uk-card uk-card-event-held">
+                                        <div class="uk-card-body">
+                                            <div class="uk-date">${research.date | formatDate}</div>
+                                            <h3 class="uk-card-title">${research.id}: ${research.title.rendered}</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="uk-load-more">
+                                <button v-on:click.prevent="getResearch" type="button" class="uk-load-more-trigger"
+                                    v-bind:class="{ 'uk-fetching': research.isFetching }">
+                                    <div class="uk-load-more-text">Дивитись більше</div>
+                                    <div class="uk-spinner" data-uk-spinner></div>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="uk-width-1-4">
+                            <div class="uk-bar">
+                                <div class="uk-bar-body">
+                                    <div class="uk-categories uk-categories-secondary">
+                                        <div class="uk-categories-title">Архів за роками:</div>
+                                        <div class="uk-categories-list">
+                                            <div class="uk-categories-item">
+                                                <a href="#" class="uk-category uk-active">2019</a>
+                                                <div class="uk-subcategories">
+                                                    <div class="uk-subcategories-item">
+                                                        <a href="#" class="uk-subcategory">Січень</a>
+                                                    </div>
+                                                    <div class="uk-subcategories-item">
+                                                        <a href="#" class="uk-subcategory">Лютий</a>
+                                                    </div>
+                                                    <div class="uk-subcategories-item">
+                                                        <a href="#" class="uk-subcategory">Березень</a>
+                                                    </div>
+                                                    <div class="uk-subcategories-item">
+                                                        <a href="#" class="uk-subcategory">Квітень</a>
+                                                    </div>
+                                                    <div class="uk-subcategories-item">
+                                                        <a href="#" class="uk-subcategory">Травень</a>
+                                                    </div>
+                                                    <div class="uk-subcategories-item">
+                                                        <a href="#" class="uk-subcategory">Червень</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="uk-categories-item">
+                                                <a href="#" class="uk-category">2018</a>
+                                            </div>
+                                            <div class="uk-categories-item">
+                                                <a href="#" class="uk-category">2017</a>
+                                            </div>
+                                            <div class="uk-categories-item">
+                                                <a href="#" class="uk-category">2016</a>
+                                            </div>
+                                            <div class="uk-categories-item">
+                                                <a href="#" class="uk-category">2015</a>
+                                            </div>
+                                            <div class="uk-categories-item">
+                                                <a href="#" class="uk-category">2014</a>
+                                            </div>
+                                            <div class="uk-categories-item">
+                                                <a href="#" class="uk-category">2013</a>
+                                            </div>
+                                            <div class="uk-categories-item">
+                                                <a href="#" class="uk-category">2012</a>
+                                            </div>
+                                            <div class="uk-categories-item">
+                                                <a href="#" class="uk-category">2011</a>
+                                            </div>
+                                            <div class="uk-categories-item">
+                                                <a href="#" class="uk-category">2010</a>
+                                            </div>
+                                            <div class="uk-categories-item">
+                                                <a href="#" class="uk-category">2009</a>
+                                            </div>
+                                            <div class="uk-categories-item">
+                                                <a href="#" class="uk-category">2008</a>
+                                            </div>
+                                            <div class="uk-categories-item">
+                                                <a href="#" class="uk-category">2007</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quote">
+                                <div class="quote-body">
+                                    Відповідь одного дурня з вулиці нікого не хвилює. Але відповіді сотні дурнів
+                                    називаються результатом дослідження фокус-групи і продаються за гроші.
+                                </div>
+                                <div class="quote-footer">
+                                    <div class="quote-author">
+                                        <div class="quote-author-name">Артемій Лєбєдєв</div>
+                                        <div class="quote-author-avatar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="frame frame-facebook">
+                                <img src="%=static=%img/content/frame-facebook.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="uk-page-footer">
+            {{> footer/footer visible=true}}
+        </div>
+
+    </div>
+
+    {{> scripts/scripts}}
+</body>
+
+</html>

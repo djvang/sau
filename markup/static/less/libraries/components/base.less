@@ -60,7 +60,7 @@
 @base-list-padding-left: 15px;
 
 @base-hr-margin-vertical: @global-margin;
-@base-hr-border-width: @global-border-width;
+@base-hr-border-width: 1px;
 @base-hr-border: @global-border;
 
 @base-blockquote-font-size: @global-medium-font-size;
@@ -151,13 +151,6 @@
     strong {
         font-weight: 500;
     }
-
-    .uk-date {
-        font-size: 14px;
-        line-height: 100%;
-
-        color: rgba(0, 0, 0, 0.45);
-    }
 }
 
 
@@ -172,11 +165,7 @@
 @inverse-base-heading-color: @inverse-global-emphasis-color;
 @inverse-base-hr-border: @inverse-global-border;
 
-.hook-inverse() {
-    .uk-date {
-        color: rgba(255, 255, 255, 0.6);
-    }
-}
+.hook-inverse() {}
 
 .hook-inverse-base-link() {}
 

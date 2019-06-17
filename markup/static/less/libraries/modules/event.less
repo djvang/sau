@@ -1,0 +1,174 @@
+.hook-card-misc() {
+    .uk-card-event {
+        text-decoration: none;
+        color: @global-color;
+
+        .uk-card-body {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            color: @global-color;
+
+            .uk-card-description {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .uk-card-event-primary {
+        background-color: #33313B;
+        color: #fff;
+        text-decoration: none;
+        min-height: 200px;
+
+        .uk-card-media-left {
+            background-color: #4E4C56;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .uk-date-secondary {
+            text-align: center;
+        }
+
+        .uk-card-body {
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 40px;
+        }
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            color: #fff;
+
+            .uk-card-description {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .uk-card-event-secondary {
+        border: @global-border-width solid @global-border;
+        text-decoration: none;
+        min-height: 140px;
+        color: inherit;
+
+        .uk-card-media-left {
+            border-right: @global-border-width solid @global-border;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .uk-date-secondary {
+            text-align: center;
+        }
+
+        .uk-card-body {
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 40px;
+        }
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            color: inherit;
+
+            .uk-card-description {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .uk-card-event-tertiary {
+        text-decoration: none;
+
+        .uk-date {
+            font-size: 12px;
+        }
+
+        .uk-card-title {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        *+.uk-card-title {
+            margin-top: 8px;
+        }
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+
+            .uk-card-title {
+                text-decoration: underline;
+            }
+        }
+
+    }
+
+    .uk-card-event-held {
+        text-decoration: none;
+        display: block;
+
+        .uk-card-body {
+            padding-left: 0;
+            padding-right: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+
+    .uk-card-event-held-secondary {
+        text-decoration: none;
+        display: block;
+
+        .uk-card-body {
+            padding: 0;
+        }
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+}
+
+.hook-slider-misc() {
+    .uk-slider-events {
+        position: relative;
+
+        .uk-slider-header {
+            width: 100px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+            text-align: right;
+        }
+
+        .uk-card-event {
+            .uk-card-start {
+                padding-right: 100px;
+            }
+        }
+    }
+}

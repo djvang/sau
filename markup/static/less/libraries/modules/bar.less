@@ -56,7 +56,7 @@
         font-weight: 500;
         background-color: #33313B;
         color: #fff;
-        border: 1px solid transparent;
+        border: none;
 
         .uk-icon {
             margin-left: 12px;
@@ -71,6 +71,14 @@
 
         &:not(:disabled) {
             cursor: pointer;
+        }
+    }
+
+    .uk-bar-secondary {
+        background-color: #E1E2E2;
+
+        .uk-slider-header {
+            background-image: linear-gradient(to left, #E1E2E2 70%, transparent);
         }
     }
 }

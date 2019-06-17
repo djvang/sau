@@ -18,9 +18,9 @@
 @article-title-font-size: @article-title-font-size-m * 0.85;
 @article-title-line-height: 1.2;
 
-@article-meta-font-size: @global-small-font-size;
-@article-meta-line-height: 1.4;
-@article-meta-color: @global-muted-color;
+@article-meta-font-size: @global-font-size;
+@article-meta-line-height: 1.67;
+@article-meta-color: @global-color;
 
 
 // Hooks
@@ -40,6 +40,14 @@
     flex-wrap: wrap;
     margin: 0 -16px;
     line-height: 1;
+
+    .uk-grid-divider> :not(.uk-first-column)::before {
+        border-width: @global-border-width;
+    }
+
+    .uk-date-secondary {
+        text-align: center;
+    }
 
     >* {
         padding: 0 16px;
@@ -70,9 +78,13 @@
     }
 
     .uk-article-actions {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
         border: @global-border-width solid @global-border;
         padding: 20px;
         font-size: 14px;
+        box-sizing: border-box;
     }
 
     *+.uk-article-action {
