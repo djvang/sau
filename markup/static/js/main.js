@@ -1,6 +1,6 @@
 "use strict";
 
-const API_URL = "http://demo.wp-api.org/wp-json/wp/v2";
+const API_URL = "https://demo.wp-api.org/wp-json/wp/v2";
 
 const app = new Vue({
     el: "#app",
