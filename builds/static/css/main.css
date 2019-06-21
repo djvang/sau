@@ -13,7 +13,7 @@
  */
 html {
   /* 1 */
-  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 18px;
   font-weight: normal;
   line-height: 1.77;
@@ -252,7 +252,7 @@ h6,
 .uk-heading-xlarge,
 .uk-heading-2xlarge {
   margin: 0 0 20px 0;
-  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-weight: 500;
   color: #333;
   text-transform: none;
@@ -284,7 +284,7 @@ h1,
 .uk-h1 {
   font-size: 1.7rem;
   line-height: 1.22;
-  font-family: 'PT Serif', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'PT Serif', Arial, sans-serif;
   font-weight: bold;
 }
 h2,
@@ -388,7 +388,7 @@ blockquote {
   font-style: italic;
   position: relative;
   font-size: 1.11em;
-  font-family: 'PT Serif', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'PT Serif', Arial, sans-serif;
   font-weight: bold;
   font-style: normal;
   padding: 38px;
@@ -953,18 +953,22 @@ a.uk-link-reset,
  * 1. Style
  */
 .uk-table th {
-  padding: 16px 12px;
+  padding: 40px 0px;
   text-align: left;
   vertical-align: bottom;
   /* 1 */
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: normal;
   color: #33313B;
+  border-top: 1px solid #E1E2E2;
+  border-bottom: 1px solid #E1E2E2;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 /* Cell
  ========================================================================== */
 .uk-table td {
-  padding: 16px 12px;
+  padding: 40px 0px;
   vertical-align: top;
 }
 /*
@@ -1006,7 +1010,8 @@ a.uk-link-reset,
  */
 .uk-table-striped > tr:nth-of-type(odd),
 .uk-table-striped tbody tr:nth-of-type(odd) {
-  background: #E1E2E2;
+  background: #E8E9E9;
+  background: transparent;
 }
 /*
  * Hover
@@ -1059,7 +1064,7 @@ a.uk-link-reset,
 }
 .uk-table-link > a {
   display: block;
-  padding: 16px 12px;
+  padding: 40px 0px;
 }
 .uk-table-small .uk-table-link > a {
   padding: 10px 12px;
@@ -1089,18 +1094,37 @@ a.uk-link-reset,
   .uk-table-responsive th:not(:first-child):not(.uk-table-link),
   .uk-table-responsive td:not(:first-child):not(.uk-table-link),
   .uk-table-responsive .uk-table-link:not(:first-child) > a {
-    padding-top: 5px !important;
+    padding-top: 13px !important;
   }
   .uk-table-responsive th:not(:last-child):not(.uk-table-link),
   .uk-table-responsive td:not(:last-child):not(.uk-table-link),
   .uk-table-responsive .uk-table-link:not(:last-child) > a {
-    padding-bottom: 5px !important;
+    padding-bottom: 13px !important;
   }
   .uk-table-justify.uk-table-responsive th,
   .uk-table-justify.uk-table-responsive td {
     padding-left: 0;
     padding-right: 0;
   }
+}
+.uk-table-striped > tr:nth-of-type(even) td:first-child,
+.uk-table-striped tbody tr:nth-of-type(even) td:first-child,
+.uk-table-striped > tr:nth-of-type(even) th:first-child,
+.uk-table-striped tbody tr:nth-of-type(even) th:first-child {
+  position: relative;
+}
+.uk-table-striped > tr:nth-of-type(even) td:first-child::before,
+.uk-table-striped tbody tr:nth-of-type(even) td:first-child::before,
+.uk-table-striped > tr:nth-of-type(even) th:first-child::before,
+.uk-table-striped tbody tr:nth-of-type(even) th:first-child::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -9999px;
+  bottom: 0;
+  left: -9999px;
+  background: #E8E9E9;
+  z-index: -1;
 }
 /* ========================================================================
    Component: Icon
@@ -2364,6 +2388,10 @@ select.uk-form-width-xsmall {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+.uk-section-organizations-overview {
+  padding-bottom: 0;
+  margin-bottom: -50px;
+}
 @media (max-width: 639px) {
   .uk-section-xlarge {
     padding-top: 90px;
@@ -3018,7 +3046,7 @@ select.uk-form-width-xsmall {
   margin-bottom: 10px;
   line-height: 1.5;
   font-weight: bold;
-  font-family: 'PT Serif', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'PT Serif', Arial, sans-serif;
 }
 .uk-card-title:last-child {
   margin-bottom: 0;
@@ -3206,7 +3234,7 @@ select.uk-form-width-xsmall {
   font-weight: 500;
   font-size: 16px;
   text-transform: uppercase;
-  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   margin-bottom: 30px;
 }
 .uk-bar-title[href]:hover,
@@ -4761,7 +4789,7 @@ ul.uk-nav-sub {
   padding: 0 25px;
   /* 3 */
   font-size: 18px;
-  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   /* 4 */
   text-decoration: none;
 }
@@ -9350,7 +9378,7 @@ iframe.uk-cover {
  */
 .uk-logo {
   font-size: 1.22rem;
-  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   color: #33313B;
   /* 1 */
   text-decoration: none;
@@ -13924,6 +13952,42 @@ iframe.uk-cover {
 }
 .hook-card-misc .uk-card-opinion-primary .uk-card-title {
   color: inherit;
+}
+.uk-organization {
+  font-size: 16px;
+}
+.uk-organization a {
+  text-decoration: none;
+}
+* + .uk-organization-title {
+  margin-top: 20px;
+}
+.uk-organization-media {
+  border: 1px solid #E1E2E2;
+  background-color: #fff;
+  padding: 15px;
+  max-width: 160px;
+}
+.uk-organization-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+a.uk-organization-site {
+  text-decoration: underline;
+}
+.uk-organization-label {
+  font-size: 14px;
+  color: #7A797F;
+  margin-bottom: 4px;
+}
+* + .uk-organization-meta {
+  margin-top: 30px;
+}
+.uk-organization-leadership-name {
+  font-weight: 500;
 }
 * + .quote {
   margin-top: 30px;
