@@ -1,0 +1,573 @@
+<!doctype html>
+<html class="no-js" lang="ua">
+
+<head>
+    {{> head/head head.defaults}}
+</head>
+
+<body>
+    %=symbols=%
+
+    <div class="uk-page" id="app">
+
+        <div class="uk-page-header">
+            {{> header/header dealers=false}}
+        </div>
+
+        <div class="uk-page-body">
+            <div class="uk-section uk-section-contacts">
+                <div class="uk-container">
+                    <div class="uk-grid" data-uk-grid>
+                        <div class="uk-width-1-1">
+                            <h1 class="uk-heading">Контактна інформація</h1>
+                            <div class="uk-contact-primary uk-margin-bottom">
+                                <div class="uk-grid" data-uk-grid>
+                                    <div class="uk-width-3-5">
+                                        <h3>Харків, майдан Свободи 6, аудіторії 358 та 360, 61077</h3>
+                                        <div class="uk-grid uk-child-width-1-2" data-uk-grid>
+                                            <div>
+                                                <div class="uk-contact-item">
+                                                    <div class="uk-contact-label">Телефон:</div>
+                                                    <div class="uk-contact-phone">+38 (057) 705-12-47</div>
+                                                </div>
+                                                <div class="uk-contact-item">
+                                                    <div class="uk-contact-label">Факс:</div>
+                                                    <div class="uk-contact-fax">+38 (057) 714-14-08 </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="uk-contact-item">
+                                                    <div class="uk-contact-label">E-mail:</div>
+                                                    <div><a class="uk-contact-email"
+                                                            href="mailto:sokuryanska@karazin.ua">sokuryanska@karazin.ua</a>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-contact-item">
+                                                    <div class="uk-contact-label">Факс:</div>
+                                                    <a href="mailto:kukolmark@gmail.com"
+                                                        class="uk-contact-email">kukolmark@gmail.com</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-2-5">
+                                        <div class="uk-contact-item">
+                                            <div class="uk-contact-label">Повна назва:</div>
+                                            <div class="uk-contact-value">Всеукраїнська громадська організація
+                                                «Cоціологічна асоціація України»</div>
+                                        </div>
+                                        <div class="uk-contact-item">
+                                            <div class="uk-contact-label">Президент асоціації:</div>
+                                            <div class="uk-contact-value">Бакіров Віль Савбанович </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="uk-container">
+                    <div class="uk-contact-map">
+                        <h3 class="uk-heading-secondary uk-contact-map-title">Регіональні відділення</h3>
+                        <div class="uk-contact-map-frame">
+                            <img src="%=static=%/img/general/map.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-container">
+                    <div>
+                        <table class="uk-table uk-table-striped uk-table-contacts">
+                            <thead>
+                                <tr>
+                                    <th class="uk-width-medium">Відділення</th>
+                                    <th>Керівництво</th>
+                                    <th class="uk-width-medium">Контактна інформація</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="uk-contact-row">
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-location">Волинське</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-leadership">
+                                                <div class="uk-contact-leadership-name">Сальнікова Світлана Анатоліївна
+                                                </div>
+                                                <div class="uk-contact-leadership-description">Кандидат соціологічних
+                                                    наук,
+                                                    доцент кафедри соціології та соціальної роботи,
+                                                    в.о. завідувача Лабораторії соціологічних досліджень
+                                                    Східноєвропейського
+                                                    національного університету імені Лесі Українки</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-label">E-mail:</div>
+                                            <a href="mailto:sv.salnikova@gmail.com"
+                                                class="uk-contact-email">sv.salnikova@gmail.com</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="uk-contact-row">
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-location">Дніпропетровське</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-leadership">
+                                                <div class="uk-contact-leadership-name">Кривошеїн Віталій Володимирович
+                                                </div>
+                                                <div class="uk-contact-leadership-description">Доктор політичних наук,
+                                                    професор, завідувач кафедри соціології Дніпровського національного
+                                                    університету імені Олеся Гончара</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-label">E-mail:</div>
+                                            <a href="mailto:1-704@i.ua" class="uk-contact-email">1-704@i.ua</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="uk-contact-row">
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-location">Донецьке (в м. Маріуполь)</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-leadership">
+                                                <div class="uk-contact-leadership-name">Слющинський Богдан Васильович
+                                                </div>
+                                                <div class="uk-contact-leadership-description">Доктор соціологічних
+                                                    наук,
+                                                    професор, завідувач кафедри політології, філософії
+                                                    та соціології Маріупольського державного університету</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-label">E-mail:</div>
+                                            <a href="mailto:slushchinskiy@hitline.net.ua"
+                                                class="uk-contact-email">slushchinskiy@hitline.net.ua</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="uk-contact-row">
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-location">Волинське</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-leadership">
+                                                <div class="uk-contact-leadership-name">Сальнікова Світлана Анатоліївна
+                                                </div>
+                                                <div class="uk-contact-leadership-description">Кандидат соціологічних
+                                                    наук,
+                                                    доцент кафедри соціології та соціальної роботи,
+                                                    в.о. завідувача Лабораторії соціологічних досліджень
+                                                    Східноєвропейського
+                                                    національного університету імені Лесі Українки</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-label">E-mail:</div>
+                                            <a href="mailto:sv.salnikova@gmail.com"
+                                                class="uk-contact-email">sv.salnikova@gmail.com</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="uk-contact-row">
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-location">Дніпропетровське</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-leadership">
+                                                <div class="uk-contact-leadership-name">Кривошеїн Віталій Володимирович
+                                                </div>
+                                                <div class="uk-contact-leadership-description">Доктор політичних наук,
+                                                    професор, завідувач кафедри соціології Дніпровського національного
+                                                    університету імені Олеся Гончара</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-label">E-mail:</div>
+                                            <a href="mailto:1-704@i.ua" class="uk-contact-email">1-704@i.ua</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="uk-contact-row">
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-location">Донецьке (в м. Маріуполь)</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-leadership">
+                                                <div class="uk-contact-leadership-name">Слющинський Богдан Васильович
+                                                </div>
+                                                <div class="uk-contact-leadership-description">Доктор соціологічних
+                                                    наук,
+                                                    професор, завідувач кафедри політології, філософії
+                                                    та соціології Маріупольського державного університету</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-label">E-mail:</div>
+                                            <a href="mailto:slushchinskiy@hitline.net.ua"
+                                                class="uk-contact-email">slushchinskiy@hitline.net.ua</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="uk-contact-row">
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-location">Волинське</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-leadership">
+                                                <div class="uk-contact-leadership-name">Сальнікова Світлана Анатоліївна
+                                                </div>
+                                                <div class="uk-contact-leadership-description">Кандидат соціологічних
+                                                    наук,
+                                                    доцент кафедри соціології та соціальної роботи,
+                                                    в.о. завідувача Лабораторії соціологічних досліджень
+                                                    Східноєвропейського
+                                                    національного університету імені Лесі Українки</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-label">E-mail:</div>
+                                            <a href="mailto:sv.salnikova@gmail.com"
+                                                class="uk-contact-email">sv.salnikova@gmail.com</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="uk-contact-row">
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-location">Дніпропетровське</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-leadership">
+                                                <div class="uk-contact-leadership-name">Кривошеїн Віталій Володимирович
+                                                </div>
+                                                <div class="uk-contact-leadership-description">Доктор політичних наук,
+                                                    професор, завідувач кафедри соціології Дніпровського національного
+                                                    університету імені Олеся Гончара</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-label">E-mail:</div>
+                                            <a href="mailto:1-704@i.ua" class="uk-contact-email">1-704@i.ua</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="uk-contact-row">
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-location">Донецьке (в м. Маріуполь)</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-leadership">
+                                                <div class="uk-contact-leadership-name">Слющинський Богдан Васильович
+                                                </div>
+                                                <div class="uk-contact-leadership-description">Доктор соціологічних
+                                                    наук,
+                                                    професор, завідувач кафедри політології, філософії
+                                                    та соціології Маріупольського державного університету</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-label">E-mail:</div>
+                                            <a href="mailto:slushchinskiy@hitline.net.ua"
+                                                class="uk-contact-email">slushchinskiy@hitline.net.ua</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="uk-contact-row">
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-location">Волинське</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-leadership">
+                                                <div class="uk-contact-leadership-name">Сальнікова Світлана Анатоліївна
+                                                </div>
+                                                <div class="uk-contact-leadership-description">Кандидат соціологічних
+                                                    наук,
+                                                    доцент кафедри соціології та соціальної роботи,
+                                                    в.о. завідувача Лабораторії соціологічних досліджень
+                                                    Східноєвропейського
+                                                    національного університету імені Лесі Українки</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-label">E-mail:</div>
+                                            <a href="mailto:sv.salnikova@gmail.com"
+                                                class="uk-contact-email">sv.salnikova@gmail.com</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="uk-contact-row">
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-location">Дніпропетровське</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-leadership">
+                                                <div class="uk-contact-leadership-name">Кривошеїн Віталій Володимирович
+                                                </div>
+                                                <div class="uk-contact-leadership-description">Доктор політичних наук,
+                                                    професор, завідувач кафедри соціології Дніпровського національного
+                                                    університету імені Олеся Гончара</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-label">E-mail:</div>
+                                            <a href="mailto:1-704@i.ua" class="uk-contact-email">1-704@i.ua</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="uk-contact-row">
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-location">Донецьке (в м. Маріуполь)</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-leadership">
+                                                <div class="uk-contact-leadership-name">Слющинський Богдан Васильович
+                                                </div>
+                                                <div class="uk-contact-leadership-description">Доктор соціологічних
+                                                    наук,
+                                                    професор, завідувач кафедри політології, філософії
+                                                    та соціології Маріупольського державного університету</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-label">E-mail:</div>
+                                            <a href="mailto:slushchinskiy@hitline.net.ua"
+                                                class="uk-contact-email">slushchinskiy@hitline.net.ua</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="uk-contact-row">
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-location">Волинське</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-leadership">
+                                                <div class="uk-contact-leadership-name">Сальнікова Світлана Анатоліївна
+                                                </div>
+                                                <div class="uk-contact-leadership-description">Кандидат соціологічних
+                                                    наук,
+                                                    доцент кафедри соціології та соціальної роботи,
+                                                    в.о. завідувача Лабораторії соціологічних досліджень
+                                                    Східноєвропейського
+                                                    національного університету імені Лесі Українки</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-label">E-mail:</div>
+                                            <a href="mailto:sv.salnikova@gmail.com"
+                                                class="uk-contact-email">sv.salnikova@gmail.com</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="uk-contact-row">
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-location">Дніпропетровське</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-leadership">
+                                                <div class="uk-contact-leadership-name">Кривошеїн Віталій Володимирович
+                                                </div>
+                                                <div class="uk-contact-leadership-description">Доктор політичних наук,
+                                                    професор, завідувач кафедри соціології Дніпровського національного
+                                                    університету імені Олеся Гончара</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-label">E-mail:</div>
+                                            <a href="mailto:1-704@i.ua" class="uk-contact-email">1-704@i.ua</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="uk-contact-row">
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-location">Донецьке (в м. Маріуполь)</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-leadership">
+                                                <div class="uk-contact-leadership-name">Слющинський Богдан Васильович
+                                                </div>
+                                                <div class="uk-contact-leadership-description">Доктор соціологічних
+                                                    наук,
+                                                    професор, завідувач кафедри політології, філософії
+                                                    та соціології Маріупольського державного університету</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-label">E-mail:</div>
+                                            <a href="mailto:slushchinskiy@hitline.net.ua"
+                                                class="uk-contact-email">slushchinskiy@hitline.net.ua</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="uk-contact-row">
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-location">Волинське</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-leadership">
+                                                <div class="uk-contact-leadership-name">Сальнікова Світлана Анатоліївна
+                                                </div>
+                                                <div class="uk-contact-leadership-description">Кандидат соціологічних
+                                                    наук,
+                                                    доцент кафедри соціології та соціальної роботи,
+                                                    в.о. завідувача Лабораторії соціологічних досліджень
+                                                    Східноєвропейського
+                                                    національного університету імені Лесі Українки</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-label">E-mail:</div>
+                                            <a href="mailto:sv.salnikova@gmail.com"
+                                                class="uk-contact-email">sv.salnikova@gmail.com</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="uk-contact-row">
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-location">Дніпропетровське</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-leadership">
+                                                <div class="uk-contact-leadership-name">Кривошеїн Віталій Володимирович
+                                                </div>
+                                                <div class="uk-contact-leadership-description">Доктор політичних наук,
+                                                    професор, завідувач кафедри соціології Дніпровського національного
+                                                    університету імені Олеся Гончара</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-label">E-mail:</div>
+                                            <a href="mailto:1-704@i.ua" class="uk-contact-email">1-704@i.ua</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="uk-contact-row">
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-location">Донецьке (в м. Маріуполь)</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-leadership">
+                                                <div class="uk-contact-leadership-name">Слющинський Богдан Васильович
+                                                </div>
+                                                <div class="uk-contact-leadership-description">Доктор соціологічних
+                                                    наук,
+                                                    професор, завідувач кафедри політології, філософії
+                                                    та соціології Маріупольського державного університету</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uk-contact">
+                                            <div class="uk-contact-label">E-mail:</div>
+                                            <a href="mailto:slushchinskiy@hitline.net.ua"
+                                                class="uk-contact-email">slushchinskiy@hitline.net.ua</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="uk-page-footer">
+            {{> footer/footer visible=true}}
+        </div>
+
+    </div>
+
+    {{> scripts/scripts}}
+</body>
+
+</html>

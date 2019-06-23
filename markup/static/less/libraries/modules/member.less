@@ -1,0 +1,54 @@
+.uk-member {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+
+    &[href] {
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+
+            .uk-member-name {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.uk-member-name {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    font-family: @global-font-family-secondary;
+}
+
+.uk-member-description {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.uk-member-avatar {
+    display: inline-block;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+    }
+}
+
+
+.hook-slider-misc() {
+    .uk-slider-members {
+        // overflow: visible;
+    }
+}
