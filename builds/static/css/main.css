@@ -2441,6 +2441,7 @@ select.uk-form-width-xsmall {
   background-color: #fff;
   padding-top: 60px;
   padding-bottom: 60px;
+  margin-top: 30px;
 }
 .uk-section-organizations-overview {
   padding-bottom: 0;
@@ -5364,7 +5365,7 @@ ul.uk-nav-sub {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   /* 2 */
-  margin-left: -30px;
+  margin-left: -20px;
   /* 3 */
   padding: 0;
   list-style: none;
@@ -5380,7 +5381,7 @@ ul.uk-nav-sub {
       -ms-flex: none;
           flex: none;
   /* 2 */
-  padding-left: 30px;
+  padding-left: 20px;
   /* 3 */
   position: relative;
 }
@@ -5396,38 +5397,18 @@ ul.uk-nav-sub {
   display: block;
   text-align: center;
   /* 2 */
-  padding: 0 15px;
-  color: #33313B;
-  font-size: 16px;
-  min-height: 40px;
-  position: relative;
-  left: -10px;
-}
-.uk-tab > * > a::after {
-  content: '';
-  display: block;
-  width: 14px;
-  margin: auto;
-  margin-top: 10px;
-  height: 8px;
-  background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 0L0 8H14L7 0Z' fill='white'/%3E%3C/svg%3E%0A");
-  opacity: 0;
+  padding: 5px 10px;
+  color: #1161D9;
 }
 /* Hover + Focus */
 .uk-tab > * > a:hover,
 .uk-tab > * > a:focus {
-  color: #33313B;
+  color: #1161D9;
   text-decoration: none;
-  text-decoration: underline;
 }
 /* Active */
 .uk-tab > .uk-active > a {
   color: #333;
-  font-weight: bold;
-  text-decoration: none;
-}
-.uk-tab > .uk-active > a::after {
-  opacity: 1;
 }
 /* Disabled */
 .uk-tab > .uk-disabled > a {
@@ -5461,6 +5442,10 @@ ul.uk-nav-sub {
 }
 .uk-tab-right > * > a {
   text-align: left;
+}
+.uk-tab-link {
+  background-color: #fff;
+  color: #1161D9;
 }
 /* ========================================================================
    Component: Slidenav
@@ -14490,7 +14475,6 @@ iframe.uk-cover {
 .uk-page-footer {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  margin-top: 30px;
 }
 .uk-panel {
   border-radius: 10px;
@@ -14670,6 +14654,59 @@ iframe.uk-cover {
 * + .frame {
   margin-top: 30px;
 }
+.uk-journal-primary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: -10px;
+  font-size: 16px;
+}
+.uk-journal-primary > * {
+  margin: 10px;
+}
+.uk-journal-primary .uk-journal-left {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 170px;
+}
+.uk-journal-primary .uk-journal-poster {
+  margin-bottom: 30px;
+}
+.uk-journal-primary .uk-journal-poster img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.uk-journal-primary .uk-journal-code {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.uk-journal-primary * + .uk-journal-meta {
+  margin-top: 20px;
+}
+.uk-journal-primary .uk-journal-meta-label {
+  font-weight: 500;
+}
+.uk-journal-primary * + .uk-journal-description {
+  margin-top: 40px;
+}
+.uk-journal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.uk-journal .uk-journal-body {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.uk-journal .uk-journal-right {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
 .uk-member {
   text-align: center;
   display: block;
@@ -14709,6 +14746,45 @@ iframe.uk-cover {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: inherit;
+}
+.uk-monograph-primary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: -10px;
+  font-size: 16px;
+}
+.uk-monograph-primary > * {
+  margin: 10px;
+}
+.uk-monograph-primary .uk-monograph-left {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 170px;
+}
+.uk-monograph-primary .uk-monograph-poster {
+  margin-bottom: 30px;
+}
+.uk-monograph-primary .uk-monograph-poster img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.uk-monograph-primary .uk-monograph-code {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.uk-monograph-primary * + .uk-monograph-meta {
+  margin-top: 20px;
+}
+.uk-monograph-primary .uk-monograph-meta-label {
+  font-weight: 500;
+}
+.uk-monograph-primary * + .uk-monograph-description {
+  margin-top: 40px;
+}
+.uk-monograph-primary .uk-monograph-meta-info {
+  font-weight: 500;
 }
 .hook-section-misc .uk-section-opinions {
   background: #E1E2E2;
