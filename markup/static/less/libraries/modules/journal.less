@@ -1,0 +1,55 @@
+.uk-journal-primary {
+    display: flex;
+    margin: -10px;
+    font-size: 16px;
+
+    >* {
+        margin: 10px;
+    }
+
+    .uk-journal-left {
+        flex-shrink: 0;
+        width: 170px;
+    }
+
+    .uk-journal-poster {
+        margin-bottom: 30px;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .uk-journal-code {
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+    *+.uk-journal-meta {
+        margin-top: 20px;
+    }
+
+    .uk-journal-meta-label {
+        font-weight: 500;
+    }
+
+    *+.uk-journal-description {
+        margin-top: 40px;
+    }
+}
+
+
+.uk-journal {
+    display: flex;
+    align-items: center;
+
+    .uk-journal-body {
+        flex-grow: 1;
+    }
+
+    .uk-journal-right {
+        flex-shrink: 0;
+    }
+}
