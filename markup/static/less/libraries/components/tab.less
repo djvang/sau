@@ -35,8 +35,32 @@
 
 .hook-tab-misc() {
     .uk-tab-link {
+        box-sizing: border-box;
+        padding: 8px 16px;
+        font-size: 16px;
+        font-weight: 500;
         background-color: #fff;
         color: @global-primary-background;
+        min-height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .uk-tab>*>.uk-tab-link {
+        display: flex;
+    }
+
+    .uk-tab>*:hover>.uk-tab-link,
+    .uk-tab>*:focus>.uk-tab-link,
+    .uk-tab-link:hover,
+    .uk-tab-link:focus,
+    .uk-tab-link.uk-active,
+    .uk-tab>.uk-active>.uk-tab-link {
+        text-decoration: none;
+        background-color: @global-primary-background;
+        color: #fff;
     }
 }
 

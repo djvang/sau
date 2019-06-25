@@ -52,4 +52,51 @@
     .uk-journal-right {
         flex-shrink: 0;
     }
+
+    .uk-journal-title {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .uk-journal-author {
+        font-size: 14px;
+        color: rgba(51, 49, 59, 0.8);
+    }
+}
+
+.uk-journals {
+    .uk-tab {
+
+        &::after {
+            content: '';
+            width: 100%;
+            margin-left: 20px;
+            // margin-top: 20px;
+            display: block;
+            border-bottom: @global-border-width solid @global-primary-background;
+        }
+
+        >* {
+            &::after {
+                content: '';
+                display: block;
+                height: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                width: @global-border-width;
+                background-color: transparent;
+            }
+
+            &.uk-active {
+                &::after {
+                    background-color: @global-primary-background;
+                }
+            }
+        }
+
+        &>:not([class*='uk-width']) {
+            flex: 1;
+            min-width: 1px;
+        }
+    }
 }
