@@ -1,0 +1,28 @@
+.hook-card-misc() {
+    .uk-card-array {
+        .uk-card-meta {
+            font-size: 16px;
+        }
+
+        .uk-card-meta-label {
+            color: #7A797F;
+            font-size: 14px;
+        }
+
+        &[href] {
+            text-decoration: none;
+
+            color: inherit;
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                color: inherit;
+
+                .uk-card-title {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
