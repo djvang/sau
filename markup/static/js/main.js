@@ -1,6 +1,6 @@
 "use strict";
 
-const API_URL = "http://sau.fulltime.com.ua/wp-json/wp/v2";
+const API_URL = window.wp_api || `${window.location.origin}/wp-json/wp/v2`;
 
 Vue.component("posts", {
     props: {
