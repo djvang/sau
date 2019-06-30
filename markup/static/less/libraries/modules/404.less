@@ -1,0 +1,36 @@
+.uk-page-404 {
+    display: flex;
+    align-items: center;
+
+    .uk-section-404 {
+        flex-grow: 1;
+    }
+}
+
+.c-404 {
+    position: relative;
+    text-align: center;
+    font-size: 16px;
+}
+
+.c-404-title {
+    font-family: @global-font-family-secondary;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.c-404::before {
+    content: '404';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    z-index: -1;
+    transform: translateY(-50%);
+    font-family: @global-font-family-secondary;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 300px;
+    line-height: 100%;
+    color: #EAEBEB;
+}

@@ -1,0 +1,79 @@
+<!doctype html>
+<html class="no-js" lang="ua">
+
+<head>
+    {{> head/head head.defaults}}
+</head>
+
+<body>
+    %=symbols=%
+
+    <div class="uk-page" id="app">
+
+        <div class="uk-page-body">
+            <div class="uk-container">
+                <h1>Ajaxer test</h1>
+                <posts type="research" :page="1" :limit="1" :filters="['[category_theme]=vybori-2019']" inline-template>
+                    <div>
+                        <div class="uk-grid uk-child-width-1-3" data-uk-grid>
+                            <div>
+                                <div class="uk-card uk-card-default uk-card-body">
+                                    <h3 class="uk-card-title">Default</h3>
+                                    <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-card uk-card-default uk-card-body">
+                                    <h3 class="uk-card-title">Default</h3>
+                                    <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-card uk-card-default uk-card-body">
+                                    <h3 class="uk-card-title">Default</h3>
+                                    <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-card uk-card-default uk-card-body">
+                                    <h3 class="uk-card-title">Default</h3>
+                                    <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-card uk-card-default uk-card-body">
+                                    <h3 class="uk-card-title">Default</h3>
+                                    <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                            <div v-for="post in posts" class="uk-width-1-1">
+                                <div class="uk-card uk-card-default uk-card-body">
+                                    <h3 class="uk-card-title" v-html="post.title.rendered"></h3>
+                                    <div v-for="category in post['_embedded']['wp:term'][0]">${category.name}</div>
+                                    <div>${post.date | formatDate}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-load-more uk-margin-medium-top">
+                            <button v-on:click.prevent="next" type="button" class="uk-load-more-trigger"
+                                v-bind:class="{ 'uk-fetching': isFetching }">
+                                <div class="uk-load-more-text">Дивитись більше</div>
+                                <div class="uk-spinner" data-uk-spinner></div>
+                            </button>
+                        </div>
+                    </div>
+                </posts>
+            </div>
+        </div>
+
+    </div>
+
+    {{> scripts/scripts}}
+</body>
+
+</html>
