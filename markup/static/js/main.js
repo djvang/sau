@@ -19,7 +19,8 @@ Vue.component("posts", {
         filters: {
             type: Array,
             default: () => []
-        }
+        },
+        data: {}
     },
     data: function() {
         return {
