@@ -15,11 +15,16 @@
 
 .uk-categories-item+.uk-categories-item {
     border-top: 1px solid rgba(51, 49, 59, 0.1);
+    margin-top: 0;
 }
 
 .uk-categories-item {
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+.uk-accordion .uk-categories-item:not(.uk-open) .uk-subcategories {
+    display: none !important;
 }
 
 .uk-category {
@@ -36,7 +41,7 @@
     color: @global-danger-background;
 }
 
-.uk-category.uk-active {
+.uk-categories-item.uk-open .uk-category {
     color: @global-color;
 }
 
