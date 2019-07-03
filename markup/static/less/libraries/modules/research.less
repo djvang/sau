@@ -1,4 +1,22 @@
 .hook-card-misc() {
+    .uk-section-event {
+        .uk-grid-research {
+            >* {
+                &:nth-child(1) {
+                    order: -2;
+                }
+
+                &:nth-child(3) {
+                    order: -1;
+                }
+
+                &:nth-child(4) {
+                    order: -1;
+                }
+            }
+        }
+    }
+
     .uk-card-research {
         display: block;
 

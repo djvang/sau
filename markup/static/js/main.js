@@ -20,7 +20,11 @@ Vue.component("posts", {
             type: Array,
             default: () => []
         },
-        data: {}
+        data: {},
+        params: {
+            type: Object,
+            default: {}
+        }
     },
     data: function() {
         return {
@@ -44,6 +48,7 @@ Vue.component("posts", {
                 _embed: 1,
                 page: this.page,
                 per_page: this.limit,
+                ...this.params,
                 ...filters
             };
             url.search = new URLSearchParams(params);
@@ -85,7 +90,7 @@ Vue.component("posts", {
 
 const app = new Vue({
     el: "#app",
-    delimiters: ["${", "}"]
+    delimiters: ["${", "}"],
     data: {
         research: {
             isFetching: false,
