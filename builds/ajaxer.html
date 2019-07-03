@@ -48,10 +48,10 @@
             <div class="uk-page-body">
                 <div class="uk-container">
                     <h1>Ajaxer test</h1>
-                    <posts type="research" :page="1" :limit="1" :filters="['[category_theme]=vybori-2019']" :data="{ hot: true, string: 'lorem ipsum', list: [1,2,3], number: 1 }" inline-template>
+                    <posts type="research" :page="1" :limit="1" :params="{ category_theme_exclude: 17 }" :filters="['[category_theme]=vybori-2019']" :data="{ hot_id: '17', string: 'lorem ipsum', list: [1,2,3], number: 1 }" inline-template>
                         <div>
                             <div>
-                                ${data.hot}, ${data.string + ' Hello!'}, ${data.number + 2}
+                                ${data.hot_id}, ${data.string + ' Hello!'}, ${data.number + 2}
                             </div>
                             <div v-for="i in data.list">
                                 <div>${i}</div>
@@ -106,7 +106,7 @@
                                     <div class="uk-card uk-card-default uk-card-body">
                                         <h3 class="uk-card-title" v-html="post.title.rendered"></h3>
                                         <div v-for="category in post['_embedded']['wp:term'][0]">
-                                            ${category.name}
+                                            ${data.hot_id === category.id}
                                         </div>
                                         <div>${post.date | formatDate}</div>
                                     </div>
