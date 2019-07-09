@@ -16,6 +16,9 @@ Vue.component("posts", {
             type: Number,
             default: 10
         },
+        total: {
+            type: Number
+        },
         filters: {
             type: Array,
             default: () => []
@@ -29,7 +32,9 @@ Vue.component("posts", {
     data: function() {
         return {
             isFetching: false,
-            posts: []
+            posts: [],
+            total: 0,
+            pages: 0
         };
     },
     methods: {
@@ -54,7 +59,13 @@ Vue.component("posts", {
             url.search = new URLSearchParams(params);
 
             fetch(url)
-                .then(response => response.json())
+                .then(response => {
+                    this.total = Number(response.headers.get("x-wp-total"));
+                    this.pages = Number(
+                        response.headers.get("x-wp-totalpages")
+                    );
+                    return response.json();
+                })
                 .then(json => {
                     if (json.message) {
                         throw new Error(json.message);
